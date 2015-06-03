@@ -5,8 +5,21 @@ jQuery(document).ready(function($) {
     jQuery('.pricing-tables ol ol li:nth-last-child(2)').addClass('deliverables');
     jQuery('.pricing-tables ol ol li:last-child').addClass('cta-button');
     jQuery('.pricing-tables ol ol li:last-child a').addClass('button');
+    
+    jQuery('.pricing-table:nth-child(2)').addClass('pop-out');
 
-    jQuery('.pricing-table li:not(li li):first-child').addClass('small-table');
-    jQuery('.pricing-table li:not(li li):last-child').addClass('small-table');
+    jQuery('.pricing-table').hover(
+            function() {
+                if( jQuery('.pricing-table:nth-child(2)').hasClass('pop-out') ) {
+                    jQuery('.pricing-table:nth-child(2)').removeClass('pop-out');
+                }
+                jQuery(this).addClass('pop-out');
+            }, function() {
+                jQuery(this).removeClass('pop-out');
+                if( jQuery('.pricing-table:nth-child(2)').hasClass('pop-out') ) { /* do nothing */ }
+                else { 
+                    jQuery('.pricing-table:nth-child(2)').addClass('pop-out'); 
+                }
+            });
 });
 

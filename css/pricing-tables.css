@@ -1,5 +1,6 @@
 .pricing-tables {
-  margin: 50px auto;
+  margin: 0 auto;
+  color: #777;
   /*width: 680px;*/
   /*font-family: "Open Sans", sans-serif;*/
   /*font-size: 14px;*/
@@ -11,16 +12,14 @@
 .pricing-table {
   float: left;
   width: 33%;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 0;
   background-color: white;
   border: 1px solid silver;
   position: relative;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px silver;
-  z-index: 1;
   box-sizing: border-box;
-  
+  box-shadow: 0px 0px 10px silver;
   list-style: none;
   text-align: center;
   font-weight: bold;
@@ -37,6 +36,20 @@
   z-index: 0;
   width: 30%;
 }
+.pop-out {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    box-shadow: 0px 0px 20px silver;
+    z-index: 1;
+}
 .pricing-table li {
   list-style: none;
   /*line-height: 2.5em;*/
@@ -45,6 +58,15 @@
   background: white;
   font-weight: normal;
   padding: 5px 0;
+}
+.pricing-table li:hover {
+    background: #f4f4f4;
+}
+.pricing-table li a {
+    text-decoration: none;
+    color: #777;
+}
+.pricing-table li a:hover {
 }
 .pricing-table .title {
   font-weight: bold;
@@ -55,21 +77,23 @@
 }
 .pricing-table .price {
   font-size: 1.6em;
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
   border: none;
+  padding: 10px 0;
 }
 .pricing-table .description {
-  font-size: 0.9em;
-  color: #666;
+  font-size: 0.85em;
+  color: #999;
   border: none;
+  background-color: white;
 }
 .pricing-table .deliverables {
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 .pricing-table .cta-button {
   border: none;
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
   border-radius: 0 0 9px 9px;
   padding: 20px;
 }
@@ -83,7 +107,11 @@
 }
 .pricing-table .button:hover {
   background-color: #64cec0;
-  transition-duration: 0.3s;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
 }
 
 
