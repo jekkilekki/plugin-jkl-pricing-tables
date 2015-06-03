@@ -3,7 +3,7 @@
 * [Plugin Page](http://www.wordpress.org/plugins/jkl-pricing-tables)
 * [Author Page](http://www.aaronsnowberger.com/)
 
-This is probably the SIMPLEST Pricing Tables plugin you'll ever use. All you need to do is type a group (2-5) of pricing options in <ol> ordered lists within the shortcode tags. That's it!
+This is probably the SIMPLEST Pricing Tables plugin you'll ever use. All you need to do is type a group (2-5) of pricing options in `<ol>` ordered lists within the shortcode tags. That's it!
 
 ##Description
 
@@ -22,10 +22,10 @@ Requires WordPress 3.5 and PHP 5.
 
 ###How To Use the Plugin 
 1. Type the shortcode tags
-2. Create an ordered list <ol> within the tags
-3. Type the heading for your first table in the first <ol> item and hit return
-4. TAB the <ol> in to add the remainder of your content for the first table
-5. Un-indent the <ol> to write the heading of your second table
+2. Create an ordered list `<ol>` within the tags
+3. Type the heading for your first table in the first `<ol>` item and hit return
+4. TAB the `<ol>` in to add the remainder of your content for the first table
+5. Un-indent the `<ol>` to write the heading of your second table
 6. TAB in for the remainder of the content in your second table
 7. Rinse, repeat for multiple tables (supports up to 5 in a row)
 

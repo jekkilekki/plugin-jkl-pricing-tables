@@ -14,7 +14,7 @@ License:                GPLv2 or later
 License URI:            http://www.gnu.org/licenses/gpl-2.0.html
 
 This is probably the SIMPLEST Pricing Tables plugin you'll ever use. All you need 
-to do is type a group (2-5) of pricing options in <ol> ordered lists within the 
+to do is type a group (2-5) of pricing options in `<ol>` ordered lists within the 
 shortcode tags. That's it!
 
 == Description ==
@@ -36,10 +36,10 @@ Requires WordPress 3.5 and PHP 5.
 
 = How To Use the Plugin = 
 1. Type the shortcode tags
-1. Create an ordered list <ol> within the tags
-1. Type the heading for your first table in the first <ol> item and hit return
-1. TAB the <ol> in to add the remainder of your content for the first table
-1. Un-indent the <ol> to write the heading of your second table
+1. Create an ordered list `<ol>` within the tags
+1. Type the heading for your first table in the first `<ol>` item and hit return
+1. TAB the `<ol>` in to add the remainder of your content for the first table
+1. Un-indent the `<ol>` to write the heading of your second table
 1. TAB in for the remainder of the content in your second table
 1. Rinse, repeat for multiple tables (supports up to 5 in a row)
 
