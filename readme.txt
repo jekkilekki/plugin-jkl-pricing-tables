@@ -61,6 +61,25 @@ plugin, please let me know at the [WordPress.org support forums](http://wordpres
 
 Want updates about my other WordPress plugins, themes, or tutorials? Follow me [@jekkilekki](http://twitter.com/jekkilekki)
 
+= Acknowledgements = 
+This plugin uses:
+
+* [jQuery](http://jquery.com/) licensed under MIT License or GNU General Public License (GPL) Version 2
+
+= License = 
+This program is free software; you can redistribute it and/or modify it under the terms 
+of the GNU General Public License as published by the Free Software Foundation; either 
+version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY 
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this 
+program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth 
+Floor, Boston, MA 02110-1301 USA
+
+
 == How To ==
 
 = How To Use the Plugin = 
@@ -159,6 +178,7 @@ folder of your WordPress installation
 = Documentation = 
 Full documentation of the Plugin and its uses can (later) be found at its [GitHub page](https://github.com/jekkilekki/plugin-jkl-pricing-tables) 
 
+
 == Frequently Asked Questions ==
 
 = Tips =
@@ -180,33 +200,12 @@ length in order to keep the size of the pricing tables consistent. i.e. if one o
 your `<li>` elements is 2 lines long, try to make EVERY table at the same `<li>` 
 element also be 2 lines long. (See some examples at my documentation site - upcoming).
 
+
 == Screenshots ==
 
 1. The default view of the Pricing Tables
 2. Hovering over the first Table
 
-== Other Notes ==
-
-= Support = 
-[Click here to visit the forum for this plugin](https://wordpress.org/support/plugin/jkl-pricing-tables)
-
-= Acknowledgements = 
-This plugin uses:
-
-* [jQuery](http://jquery.com/) licensed under MIT License or GNU General Public License (GPL) Version 2
-
-= License = 
-This program is free software; you can redistribute it and/or modify it under the terms 
-of the GNU General Public License as published by the Free Software Foundation; either 
-version 2 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY 
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
-PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this 
-program; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth 
-Floor, Boston, MA 02110-1301 USA
 
 == Changelog ==
 
