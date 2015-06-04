@@ -1,5 +1,7 @@
 #JKL Pricing Tables
 
+![banner-772x250](https://cloud.githubusercontent.com/assets/6644259/7978546/75be7f0c-0ad1-11e5-9e04-9cf49530950f.png)
+
 * [Plugin Page](http://www.wordpress.org/plugins/jkl-pricing-tables)
 * [Author Page](http://www.aaronsnowberger.com/)
 
@@ -118,7 +120,16 @@ Full documentation of the Plugin and its uses can (currently) be found at its [W
 
 ###Screenshots
 1. The default view of the Pricing Tables
+![screenshot-1](https://cloud.githubusercontent.com/assets/6644259/7978556/89f27870-0ad1-11e5-83ba-4eeec0593be9.png)
+
 2. Hovering over the first Table
+![screenshot-2](https://cloud.githubusercontent.com/assets/6644259/7978562/9553280e-0ad1-11e5-9a63-c300f9989927.png)
+
+3. Example of HOW to use the plugin
+![screenshot-3](https://cloud.githubusercontent.com/assets/6644259/7978592/04a61f18-0ad2-11e5-8f84-b45d327817eb.png)
+
+4. Example of 4 Pricing Tables
+![screenshot-4](https://cloud.githubusercontent.com/assets/6644259/7978596/114f4abe-0ad2-11e5-8ff9-06212a94925d.png)
 
 ###Contact Me
 If you have questions about, problems with, or suggestions for improving this plugin, please let me know at the [WordPress.org support forums](http://wordpress.org/support/plugin/jkl-pricing-tables)
