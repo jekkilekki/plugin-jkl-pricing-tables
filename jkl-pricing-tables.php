@@ -35,7 +35,7 @@ function jkl_pricing_table( $attr, $content = "" ) {
     wp_register_script( 'jklpt_add_classes', plugin_dir_url( __FILE__ ) . 'js/pricing-tables.js', array( 'jquery' ) );
     wp_enqueue_script( 'jklpt_add_classes' );
     
-    $output = '<div class="pricing-tables">' . $content . '</div>';
+    $output = '<div class="pricing-tables">' . $content . '</div><div class="clear"></div>';
     
     return $output;
 }
