@@ -155,5 +155,9 @@ Floor, Boston, MA 02110-1301 USA
 
 ##Changelog
 
+###1.1
+* Makes tables responsive on window resize
+* Fixes some CSS code
+
 ###1.0
 * Initial release
