@@ -19,10 +19,13 @@ jQuery(document).ready(function($) {
         
         if ( screenWidth > 600 ) { // dunno why I have to -2 each time...
             jQuery('.pricing-table').width( width-2 + "%" );
+            jQuery('.pricing-table').css('margin-left', 'auto');
         } else if ( screenWidth > 400 ) {
             jQuery('.pricing-table').width( 31 + "%" );
+            jQuery('.pricing-table').css('margin-left', 'auto');
         } else {
-            jQuery('.pricing-table').width( 98 + "%" );
+            jQuery('.pricing-table').width( 68 + "%" );
+            jQuery('.pricing-table').css('margin-left', '15%');
         }
     }
     
