@@ -11,10 +11,23 @@ jQuery(document).ready(function($) {
         return( jQuery(this).css("display") != "none" );
     }).length;
     
-    // Calculate the width of each Pricing Table
-    var width = 100/numtables; 
-    jQuery('.pricing-table').width( width-2 + "%" );
     
+    function resizeTables() {
+        // Calculate the width of each Pricing Table
+        var width = 100/numtables; 
+        var screenWidth = jQuery('.pricing-tables').width();
+        
+        if ( screenWidth > 600 ) { // dunno why I have to -2 each time...
+            jQuery('.pricing-table').width( width-2 + "%" );
+        } else if ( screenWidth > 400 ) {
+            jQuery('.pricing-table').width( 31 + "%" );
+        } else {
+            jQuery('.pricing-table').width( 98 + "%" );
+        }
+    }
+    
+    jQuery(window).resize(function() { resizeTables(); });
+    resizeTables();
     
     // Make SECOND table pop-out
     jQuery('.pricing-table:nth-child(2)').addClass('pop-out');
