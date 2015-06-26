@@ -1,5 +1,5 @@
 .pricing-tables {
-  margin: 0 auto;
+  margin: 50px auto;
   color: #777;
   /*width: 680px;*/
   /*font-family: "Open Sans", sans-serif;*/
@@ -12,7 +12,7 @@
 .pricing-table {
   float: left;
   width: 33%;
-  margin: 50px auto;
+  margin: 10px auto;
   padding: 0;
   background-color: white;
   border: 1px solid silver;
@@ -113,5 +113,3 @@
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
 }
-
-
