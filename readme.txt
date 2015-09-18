@@ -8,8 +8,8 @@ Donate link:            https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&host
 Tags:                   content, shortcode, pricing, tables, jquery
 Requires at least:      3.0
 Tested up to:           4.2.2
-Stable tag:             1.0
-Version:                1.0
+Stable tag:             1.1
+Version:                1.1
 License:                GPLv2 or later
 License URI:            http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -209,10 +209,19 @@ element also be 2 lines long. (See some examples at my documentation site - upco
 
 == Changelog ==
 
+= 1.1 =
+* Makes tables responsive on window resize
+* Fixes some CSS code
+
 = 1.0 =
 * Initial release
 
+
 == Upgrade Notice ==
+
+= 1.1 =
+* Makes tables responsive on window resize
+* Fixes some CSS code
 
 = 1.0 =
 * Initial release
