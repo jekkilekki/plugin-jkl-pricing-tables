@@ -50,7 +50,8 @@ If you have created your own language pack, or have an update of an existing one
 7. Rinse, repeat for multiple tables (supports up to 5 in a row)
 
 ####Example of Usage
-`[jkl-pricing-table]
+```html
+[jkl-pricing-table]
 <ol>
   <li>Basic
     <ol>
@@ -73,7 +74,8 @@ If you have created your own language pack, or have an update of an existing one
     </ol>
   </li>
 </ol>
-[/jkl-pricing-table]`
+[/jkl-pricing-table]
+```
 
 ###Special CSS Classes and How to Style the Plugin
 The plugin uses jQuery to dynamically add the following CSS classes to the ordered list elements. Use these classes in your Custom CSS if you want to change things.
@@ -90,7 +92,8 @@ When applying custom CSS to change the design of your plugin, please reference t
 classes as `.pricing-table .class`
 
 ####Example of CSS Classes after jQuery assigns them
-`[jkl-pricing-table]
+```html
+[jkl-pricing-table]
 <ol>
   <li class="pricing-table">Basic
     <ol>
@@ -113,7 +116,8 @@ classes as `.pricing-table .class`
     </ol>
   </li>
 </ol>
-[/jkl-pricing-table]`
+[/jkl-pricing-table]
+```
 
 ##Documentation & Support
 Full documentation of the Plugin and its uses can (currently) be found at its [WordPress.org Plugin location](https://wordpress.org/plugins/jkl-pricing-tables/faq/)
