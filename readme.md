@@ -155,6 +155,9 @@ Floor, Boston, MA 02110-1301 USA
 
 ##Changelog
 
+###1.1.1
+* Fixes pricing-table list items margin CSS code
+
 ###1.1
 * Makes tables responsive on window resize
 * Fixes some CSS code

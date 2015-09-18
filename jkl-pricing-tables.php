@@ -3,7 +3,7 @@
  * Plugin Name: JKL Pricing Tables
  * Plugin URI: https://github.com/jekkilekki/plugin-jkl-pricing-tables
  * Description: A simple plugin to add pricing tables to your website using only unordered lists inside a shortcode.
- * Version: 1.1
+ * Version: 1.1.1
  * Author: Aaron Snowberger
  * Author URI: http://www.aaronsnowberger.com
  * Text Domain: jkl-pricing-tables/languages
