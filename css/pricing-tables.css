@@ -1,9 +1,14 @@
 .pricing-tables {
-  margin: 50px auto;
-  color: #777;
+  margin: 1em auto;
+  /*color: #777;*/
   /*width: 680px;*/
   /*font-family: "Open Sans", sans-serif;*/
   /*font-size: 14px;*/
+}
+.pricing-tables:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 .pricing-tables ol {
     margin:0;
@@ -15,17 +20,17 @@
   margin: 10px auto;
   padding: 0;
   background-color: white;
-  border: 1px solid silver;
+  border-top: 1px solid gainsboro;
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px silver;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
   list-style: none;
   text-align: center;
   font-weight: bold;
   background-color: gainsboro;
   /*border-radius: 8px 8px 0 0;*/
-  font-size: 1.1em;
+  /*font-size: 1.1em;*/
   /*border: none;*/
   line-height: 2.5em;
 }
@@ -37,49 +42,50 @@
   width: 30%;
 }
 .pop-out {
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -ms-transform: scale(1.05);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -o-transition: 0.3s;
     -ms-transition: 0.3s;
-    box-shadow: 0px 0px 20px silver;
+    /*box-shadow: 0px 0px 20px silver;*/
     z-index: 1;
 }
 .pricing-table li {
   list-style: none;
   /*line-height: 2.5em;*/
   /*text-align: center;*/
-  border-top: 1px solid gainsboro;
+  border-top: 1px solid #efefef;
   background: white;
   font-weight: normal;
   padding: 5px 0;
   margin: 0;
+  font-size: 0.9em;
 }
 .pricing-table li:hover {
-    background: #f4f4f4;
+    background: #ededed;
 }
 .pricing-table li a {
     text-decoration: none;
-    color: #777;
+    color: #fff;
 }
 .pricing-table li a:hover {
 }
 .pricing-table .title {
-  font-weight: bold;
-  background-color: gainsboro;
-  border-radius: 8px 8px 0 0;
-  font-size: 1.1em;
+  /*font-weight: bold;*/
+  /*background-color: gainsboro;*/
+  /*border-radius: 8px 8px 0 0;*/
+  /*font-size: 1.1em;*/
   border: none;
 }
 .pricing-table .price {
   font-size: 1.6em;
-  background-color: #f1f1f1;
-  border: none;
+  background-color: white;
+  border-bottom: 1px solid silver;
   padding: 10px 0;
 }
 .pricing-table .description {
@@ -90,24 +96,24 @@
 }
 .pricing-table .deliverables {
   font-weight: bold;
-  font-size: 0.85em;
+  /*font-size: 0.85em;*/
 }
 .pricing-table .cta-button {
-  border: none;
-  background-color: #f1f1f1;
-  border-radius: 0 0 9px 9px;
-  padding: 20px;
+  border-top: 1px solid silver;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  padding: 15px;
 }
 .pricing-table .button {
-  background-color: #1caa98;
+  /*background-color: #1caa98;*/
   padding: 10px 20px;
-  margin: 15px 0;
+  margin: 0;
   font-weight: bold;
   color: white;
   text-decoration: none;
 }
 .pricing-table .button:hover {
-  background-color: #64cec0;
+  /*background-color: #64cec0;*/
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
