@@ -1,5 +1,5 @@
 .pricing-tables {
-  margin: 1.5em auto;
+  margin: 3em auto;
   position: relative;
   /*color: #777;*/
   /*width: 680px;*/
@@ -22,7 +22,7 @@
   margin: 10px auto;
   padding: 0;
   background-color: white;
-  border-top: 1px solid gainsboro;
+  /*border-top: 1px solid gainsboro;*/
   position: relative;
   /*border-radius: 5px;*/
   box-sizing: border-box;
@@ -45,7 +45,8 @@
 }
 .recommended {
     position: absolute;
-    top: -10px;
+    line-height: 1;
+    top: 0;
     right: 0;
     width: 100%;
     text-align: center;
@@ -54,13 +55,16 @@
     font-style: italic;
     opacity: 0.5;
     display: none;
+    background: steelblue;
+    color: white;
+    padding: 3px 0;
 }
 .pop-out .recommended {
     display: block;
 }
 .pop-out {
-    margin-top: -3px;
-    padding-top: 15px;
+    margin-top: -6px;
+    padding-top: 18px;
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -98,10 +102,14 @@
 }
 .pricing-table .title {
   /*font-weight: bold;*/
-  /*background-color: gainsboro;*/
+  background-color: gainsboro;
   /*border-radius: 8px 8px 0 0;*/
-  /*font-size: 1.1em;*/
+  font-size: 1.1em;
   border: none;
+  display: block;
+}
+.pricing-table .pop-out .title {
+    margin-top: -15px;
 }
 .pricing-table .price {
   font-size: 1.6em;

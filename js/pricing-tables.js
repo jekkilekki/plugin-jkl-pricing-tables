@@ -22,6 +22,12 @@ jQuery( document ).ready( function( $ ) {
         
     ];
     
+    var tables = jQuery( '.pricing-tables li' );
+    for( var i = 0; i < tables.length; i++ ) {
+        var list = tables[i].innerHTML.indexOf( '<ol>' );
+        tables[i].innerHTML = '<span class="title">' + tables[i].innerHTML.substring( 0, list ) + '</span>' + tables[i].innerHTML.substring( list );
+    }
+    
     jQuery('.pricing-tables li:not(li li)').addClass('pricing-table');
     jQuery('.pricing-tables ol ol li:nth-child(1)').addClass('price');
     jQuery('.pricing-tables ol ol li:nth-child(2)').addClass('description');
