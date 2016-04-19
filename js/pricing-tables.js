@@ -86,6 +86,9 @@ jQuery( document ).ready( function( $ ) {
             var to_replace = tables[i].innerHTML.substring( tables[i].innerHTML.indexOf('*'), tables[i].innerHTML.indexOf('*')+1 );
             var with_this = '<span class="recommended">Recommended</span>';
             tables[i].innerHTML = tables[i].innerHTML.replace( to_replace, with_this );
+            var pos = i+1;
+            var big_class = '.pricing-table:nth-child(' + pos + ')';
+            jQuery( big_class ).addClass( 'big' );
             
             if( position_count == 0  ) {
                 // SECOND, determine the proper position

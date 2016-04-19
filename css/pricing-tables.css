@@ -63,8 +63,9 @@
     display: block;
 }
 .pop-out {
-    margin-top: -6px;
-    padding-top: 18px;
+    margin-top: 12px;
+/*    margin-top: -6px;
+    padding-top: 18px;*/
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -78,6 +79,10 @@
     /*box-shadow: 0px 0px 20px silver;*/
     z-index: 1;
     outline: 4px solid steelblue;
+}
+.big.pop-out {
+    margin-top: -6px;
+    padding-top: 18px;
 }
 .pricing-table li {
   list-style: none;
