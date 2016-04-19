@@ -1,5 +1,6 @@
 .pricing-tables {
-  margin: 1em auto;
+  margin: 1.5em auto;
+  position: relative;
   /*color: #777;*/
   /*width: 680px;*/
   /*font-family: "Open Sans", sans-serif;*/
@@ -13,22 +14,23 @@
 .pricing-tables ol {
     margin:0;
     padding: 0;
+    position: relative;
 }
 .pricing-table {
   float: left;
-  width: 33%;
+  min-width: 20%;
   margin: 10px auto;
   padding: 0;
   background-color: white;
   border-top: 1px solid gainsboro;
   position: relative;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   box-sizing: border-box;
-  box-shadow: 0px 1px 4px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
   list-style: none;
   text-align: center;
   font-weight: bold;
-  background-color: gainsboro;
+  /*background-color: gainsboro;*/
   /*border-radius: 8px 8px 0 0;*/
   /*font-size: 1.1em;*/
   /*border: none;*/
@@ -41,12 +43,29 @@
   z-index: 0;
   width: 30%;
 }
+.recommended {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.5;
+    display: none;
+}
+.pop-out .recommended {
+    display: block;
+}
 .pop-out {
-    transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -moz-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
+    margin-top: -3px;
+    padding-top: 15px;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -54,6 +73,7 @@
     -ms-transition: 0.3s;
     /*box-shadow: 0px 0px 20px silver;*/
     z-index: 1;
+    outline: 4px solid steelblue;
 }
 .pricing-table li {
   list-style: none;
@@ -63,11 +83,12 @@
   background: white;
   font-weight: normal;
   padding: 5px 0;
-  margin: 0;
+  margin: 0 15px;
   font-size: 0.9em;
 }
 .pricing-table li:hover {
-    background: #ededed;
+    background: #f2f5fa;
+    margin: 0;
 }
 .pricing-table li a {
     text-decoration: none;
@@ -84,15 +105,17 @@
 }
 .pricing-table .price {
   font-size: 1.6em;
-  background-color: white;
+  background-color: #f2f5fa;
   border-bottom: 1px solid silver;
   padding: 10px 0;
+  margin: 0;
 }
 .pricing-table .description {
   font-size: 0.85em;
   color: #999;
   border: none;
   background-color: white;
+  margin: 0;
 }
 .pricing-table .deliverables {
   font-weight: bold;
@@ -101,8 +124,9 @@
 .pricing-table .cta-button {
   border-top: 1px solid silver;
   background-color: white;
-  border-radius: 0 0 5px 5px;
+  /*border-radius: 0 0 5px 5px;*/
   padding: 15px;
+  margin: 0;
 }
 .pricing-table .button {
   /*background-color: #1caa98;*/
@@ -123,4 +147,18 @@
 
 .clear {
     clear: both; 
+}
+
+/*
+ * Special span classes
+ */
+.pricing-table .dollar-sign, 
+.pricing-table .installment {
+    opacity: 0.5;
+    font-size: 60%;
+    vertical-align: baseline;
+    padding: 0 1px;
+}
+.pricing-table .dollar-sign {
+    vertical-align: top;
 }
