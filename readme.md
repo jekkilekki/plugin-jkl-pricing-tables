@@ -163,6 +163,13 @@ Floor, Boston, MA 02110-1301 USA
 
 ##Changelog
 
+###1.2.0
+* Added ability to select initial pop-out table option with an * after the table title
+* JavaScript replaces the * with a `<span>` "Recommended" class and additional subtitle text
+* Added JavaScript to catch a $ or / in "/month" and add `<span>` classes to style those better
+* JavaScript adds a `<span>` class to the title for better styling
+* Updated styles (removed rounded corners, changed some colors)
+
 ###1.1.1
 * Fixes pricing-table list items margin CSS code
 
