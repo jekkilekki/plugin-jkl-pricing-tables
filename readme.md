@@ -17,7 +17,7 @@ THIS plugin is exceptionally simple.
 2. Step 2: Add an `<ol>` ordered list for your Pricing Table
 3. Step 3: Tweak until it looks right
 
-* Note: The plural form of the shortcode tags `[jkl-pricing-tables] ... [/jkl-pricing-tables]` also works now (v1.3.0) (I found I was constantly typing THAT instead of the singular form.
+__Note:__ The plural form of the shortcode tags `[jkl-pricing-tables] ... [/jkl-pricing-tables]` also works now (v1.3.0) (I found I was constantly typing THAT instead of the singular form.
 
 Requires WordPress 3.5 and PHP 5.
 
