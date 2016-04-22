@@ -209,12 +209,15 @@ element also be 2 lines long. (See some examples at my documentation site - upco
 
 == Changelog ==
 
-= 1.2.0 =
+= 1.3.0 =
 * Added ability to select initial pop-out table option with an * after the table title
 * JavaScript replaces the * with a `<span>` "Recommended" class and additional subtitle text
 * Added JavaScript to catch a $ or / in "/month" and add `<span>` classes to style those better
 * JavaScript adds a `<span>` class to the title for better styling
 * Updated styles (removed rounded corners, changed some colors)
+* General code reorganization and cleanup (Object-oriented style)
+* Also addresses a use case where the user might make the shortcode plural (i.e. 
+typing `jkl-pricing-tables` with an "s" rather that the singular `jkl-pricing-table`)
 
 = 1.1.1 =
 * Fixes pricing-table list items margin CSS code

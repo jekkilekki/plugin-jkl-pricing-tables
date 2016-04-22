@@ -170,6 +170,8 @@ Floor, Boston, MA 02110-1301 USA
 * JavaScript adds a `<span>` class to the title for better styling
 * Updated styles (removed rounded corners, changed some colors)
 * General code reorganization and cleanup (Object-oriented style)
+* Also addresses a use case where the user might make the shortcode plural (i.e. 
+typing `jkl-pricing-tables` with an "s" rather that the singular `jkl-pricing-table`)
 
 ###1.1.1
 * Fixes pricing-table list items margin CSS code
