@@ -43,6 +43,15 @@ if ( ! class_exists( 'JKL_Pricing_Tables' ) ) {
         private $shortcode;
         
         /**
+         * WordPress Options Menu Page
+         * 
+         * @since 1.3.1
+         * @access private
+         * @var     JKL_Plugins_Admin_Submenu        $options_page   A reference to the options page.
+         */
+        private $options_page;
+        
+        /**
          * CONSTRUCTOR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
          * Initializes the JKL_Pricing_Tables object and sets its properties
          * 
@@ -56,11 +65,25 @@ if ( ! class_exists( 'JKL_Pricing_Tables' ) ) {
             $this->name     = $name;
             $this->version  = $version;
             
+            // Load the plugin and supplementary files
+            $this->load();
+            
             // Create the shortcode
             $this->make_shortcode();
             
-            // Load the plugin and supplementary files
-            $this->load();
+        }
+        
+        /**
+         * Loads translation directory
+         * Adds the call to enqueue styles and scripts
+         * 
+         * @since   1.3.0
+         */
+        protected function load() {
+            
+            load_plugin_textdomain( 'jkl-pricing-tables', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+            add_action( 'admin_menu', array( $this, 'jklpt_admin_menu' ) );
+            add_action( 'wp_enqueue_scripts', array( $this, 'jklpt_scripts_styles' ) );
             
         }
         
@@ -80,16 +103,22 @@ if ( ! class_exists( 'JKL_Pricing_Tables' ) ) {
         }
         
         /**
-         * Loads translation directory
-         * Adds the call to enqueue styles and scripts
+         * Creates the Admin Menu Page for this plugin
          * 
-         * @since   1.3.0
+         * @since   1.3.1
+         * @return  object  $options_page   The WP Options Page
          */
-        protected function load() {
-            
-            load_plugin_textdomain( 'jkl-pricing-tables', false, basename( dirname( __FILE__ ) ) . '/languages/' );
-            add_action( 'wp_enqueue_scripts', array( $this, 'jkl_pt_scripts_styles' ) );
-            
+        public function jklpt_admin_menu() {
+            $args = array(
+                'parent_slug'   => 'jkl_panel',
+                'page_title'    => __( 'JKL Pricing Tables', 'jkl-pricing-tables' ),
+                'menu_title'    => __( 'Pricing Tables', 'jkl-pricing-tables' ),
+                'capability'    => 'manage_options',
+                'menu_slug'     => 'jklpt_settings',
+                'callback'      => 'jklpt_settings_page'
+            );
+            $this->options_page = new JKL_Plugins_Admin_Submenu( $args );
+            return $this->options_page; // A moot point?
         }
         
         /**
@@ -97,7 +126,7 @@ if ( ! class_exists( 'JKL_Pricing_Tables' ) ) {
          * 
          * @since   1.3.0
          */
-        public function jkl_pt_scripts_styles() {
+        public function jklpt_scripts_styles() {
             
             // Selectively load styles and scripts only when the shortcode is active on a page
             global $post;

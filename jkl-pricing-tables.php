@@ -45,9 +45,11 @@
 /* Prevent direct access */
 if ( ! defined( 'WPINC' ) ) die;
 
-/*
+/**
  * The class that represents the MAIN JKL ADMIN settings page
  */
+require_once plugin_dir_path( __FILE__ ) . 'admin/admin-plugins-menu.php';
+require_once plugin_dir_path( __FILE__ ) . 'admin/admin-plugins-submenu.php';
 
 /*
  * The class that represents and defines the core plugin
