@@ -14,11 +14,18 @@ if ( ! class_exists( 'JKL_Plugins_Admin_Submenu' ) ) {
 class JKL_Plugins_Admin_Submenu {
 
     /**
-     * Settings
+     * Submenu Settings
      * @since   1.3.1
      * @var     array   $settings   The array of settings for this admin subpage   
      */
     protected $settings;
+    
+    /**
+     * Admin Menu
+     * @since   1.3.1
+     * @var     array   $admin_menu The array containing the MAIN JKL Plugins Admin menu   
+     */
+    protected $admin_menu;
     
     /**
      * Build a new WP Submenu page with the passed in arguments
@@ -44,24 +51,12 @@ class JKL_Plugins_Admin_Submenu {
         // add_action( 'load-' . $this->settings, array( $this, 'jklpc_add_tabs' ) );
     }
     
+    /**
+     * Function to create the MAIN WordPress menu for JKL Plugins
+     * @since   1.3.1
+     */
     public function jkl_general_menu() {
-        global $menu, $jkl_general_menu_exist;
-        
-        if( ! $jkl_general_menu_exist ) {
-            // check also menu exists in global array as in old plugins 
-            // custom code here we probably don't need
-            add_menu_page(
-                    __( 'JKL Plugins MAIN', 'jkl-reviews' ),    // $page_title
-                    __( 'JKL Plugins', 'jkl-reviews' ),         // $menu_title
-                    'manage_options',                           // $capability
-                    'jkl-plugins-main-menu',                    // $menu_slug
-                    'jkl_plugins_main_page',                    // $function
-                    'dashicons-admin-plugins'                   // $icon
-            );
-            // add_submenu_page();
-            
-            $jkl_general_menu_exist = true;
-        }
+        $this->admin_menu = JKL_Plugins_Admin_Menu::get_instance();
     } // END jkl_general_menu()
     
     public function add_menu_items() {
