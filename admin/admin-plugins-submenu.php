@@ -33,9 +33,10 @@ class JKL_Plugins_Admin_Submenu {
      * @var     array   $args       The arguments used to create the submenu page
      */
     public function __construct( $args ) {
-        // Create the MAIN Menu (if it doesn't exist)
-        $this->jkl_general_menu();
         
+        // Create the MAIN Menu (if it doesn't exist)
+        $this->admin_menu = JKL_Plugins_Admin_Menu::get_instance();
+
         // Add a submenu Page to the Main Menu
         $this->settings = add_submenu_page(
                 $args[ 'parent_slug' ],
@@ -43,25 +44,25 @@ class JKL_Plugins_Admin_Submenu {
                 $args[ 'menu_title' ],
                 $args[ 'capability' ],
                 $args[ 'menu_slug' ],
-                $args[ 'callback' ]
+                array( $this, $args[ 'callback' ] )
         );
-        
+        // echo "Hello eburybody!~";
         // Submenu Page content (view)
-        $this->add_menu_items();
-        // add_action( 'load-' . $this->settings, array( $this, 'jklpc_add_tabs' ) );
+        // $this->add_menu_items();
+        // add_action( 'load-' . $this->settings, array( $this, 'jklpt_add_tabs' ) );
     }
-    
-    /**
-     * Function to create the MAIN WordPress menu for JKL Plugins
-     * @since   1.3.1
-     */
-    public function jkl_general_menu() {
-        $this->admin_menu = JKL_Plugins_Admin_Menu::get_instance();
-    } // END jkl_general_menu()
     
     public function add_menu_items() {
         
     } // END add_menu_items()
+    
+    public function jklpt_add_tabs() {
+        echo "Hello eburybody!~";
+    }
+    
+    public function jklpt_settings_page() {
+        include_once( '../views/view-jkl-pricing-table-options.php' );
+    }
     
 } // END class JKL_Plugins_Admin_Submenu
 

@@ -13,6 +13,14 @@ if ( ! class_exists( 'JKL_Plugins_Admin_Menu' ) ) {
 
 class JKL_Plugins_Admin_Menu {
     
+    /**
+     * THE instance of the JKL_Plugins_Admin_Menu
+     * Using the Singleton pattern to prevent creating more than one JKL_Plugins_Admin_Menu Object
+     * 
+     * @since   1.3.1
+     * 
+     * @var     Object  $_instance  THE instance of the JKL_Plugins_Admin_Menu
+     */
     private static $_instance = null;
 
     /**
@@ -36,16 +44,14 @@ class JKL_Plugins_Admin_Menu {
      */
     public function jkl_add_plugins_menu() {
 
-        /**
-         * Create a top-level menu item
-         */
+        // Create a top-level menu item
         add_menu_page(
-                __( 'JKL Plugins MAIN', 'jkl-reviews' ),    // $page_title
-                __( 'JKL Plugins', 'jkl-reviews' ),         // $menu_title
-                'manage_options',                           // $capability
-                'jkl-plugins-admin',                        // $menu_slug
-                array( $this, 'jkl_plugins_admin_render' ), // $function
-                'dashicons-admin-plugins'                   // $icon
+                __( 'JKL Plugins MAIN', 'jkl-pricing-tables' ), // $page_title
+                __( 'JKL Plugins', 'jkl-pricing-tables' ),      // $menu_title
+                'manage_options',                               // $capability
+                'jkl_panel',                                    // $menu_slug
+                array( $this, 'jkl_plugins_admin_render' ),     // $function
+                'dashicons-admin-plugins'                       // $icon
         );
         add_action( 'admin_enqueue_scripts', array( $this, 'jkl_plugins_admin_scripts' ) );
          

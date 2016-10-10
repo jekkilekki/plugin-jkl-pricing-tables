@@ -54,12 +54,12 @@ require_once plugin_dir_path( __FILE__ ) . 'admin/admin-plugins-submenu.php';
 /*
  * The class that represents and defines the core plugin
  */
-require_once plugin_dir_path( __FILE__ ) . 'inc/class-jkl-pricing-tables.php';
+require_once plugin_dir_path( __FILE__ ) . 'classes/class-jkl-pricing-tables.php';
 
 /*
  * The class that creates the Shortcode
  */
-require_once plugin_dir_path( __FILE__ ) . 'inc/class-jkl-pricing-tables-shortcode.php';
+require_once plugin_dir_path( __FILE__ ) . 'classes/class-jkl-pricing-tables-shortcode.php';
 
 /*
  * The function that creates a new JKL_Pricing_Tables object and runs the program

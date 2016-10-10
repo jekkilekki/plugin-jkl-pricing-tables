@@ -118,7 +118,7 @@ if ( ! class_exists( 'JKL_Pricing_Tables' ) ) {
                 'callback'      => 'jklpt_settings_page'
             );
             $this->options_page = new JKL_Plugins_Admin_Submenu( $args );
-            return $this->options_page; // A moot point?
+            //return $this->options_page; // A moot point?
         }
         
         /**
