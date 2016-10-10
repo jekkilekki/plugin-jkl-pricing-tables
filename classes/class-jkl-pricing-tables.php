@@ -115,7 +115,7 @@ if ( ! class_exists( 'JKL_Pricing_Tables' ) ) {
                 'menu_title'    => __( 'Pricing Tables', 'jkl-pricing-tables' ),
                 'capability'    => 'manage_options',
                 'menu_slug'     => 'jklpt_settings',
-                'callback'      => 'jklpt_settings_page'
+                'callback'      => 'jkl_plugin_settings'
             );
             $this->options_page = new JKL_Plugins_Admin_Submenu( $args );
             //return $this->options_page; // A moot point?

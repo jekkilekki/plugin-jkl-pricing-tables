@@ -46,22 +46,67 @@ class JKL_Plugins_Admin_Submenu {
                 $args[ 'menu_slug' ],
                 array( $this, $args[ 'callback' ] )
         );
+        
+        add_action( 'admin_init', array( $this, 'jkl_settings_init' ) );
+        
         // echo "Hello eburybody!~";
         // Submenu Page content (view)
         // $this->add_menu_items();
         // add_action( 'load-' . $this->settings, array( $this, 'jklpt_add_tabs' ) );
     }
     
-    public function add_menu_items() {
+    public function jkl_settings_init() {
         
-    } // END add_menu_items()
-    
-    public function jklpt_add_tabs() {
-        echo "Hello eburybody!~";
+        // Register settings for this plugin
+        register_setting( 'jklpt_options', 'jklpt_settings' );
+        
+        // Add Settings Section
+        add_settings_section(
+                'jklpt_options_section',
+                __( 'Plugin Settings', 'jkl-pricing-tables' ),
+                array( $this, 'jkl_settings_section' ),
+                'jklpt_options'
+        );
+        
+        // Text field for "Recommended" label
+        add_settings_field(
+                'jklpt_recommended_label',                                      // $id
+                __( 'Label for recommended product', 'jkl-pricing-tables' ),    // $title
+                array( $this, 'jklpt_recommended_render' ),                     // $callback
+                'jklpt_options',                                                // $page
+                'jklpt_options_section'                                         // $section (also $args next)
+        );
+        
+        // Text field for HTML or named color input
+        add_settings_field(
+                'jklpt_html_color',                                             // $id
+                __( 'Base color (HTML) for highlights', 'jkl-pricing-tables' ), // $title
+                array( $this, 'jklpt_html_color_render' ),                      // $callback
+                'jklpt_options',                                                // $page
+                'jklpt_options_section'                                         // $section (also $args next)
+        );
     }
     
-    public function jklpt_settings_page() {
-        include_once( '../views/view-jkl-pricing-table-options.php' );
+    public function jkl_settings_section() {
+        echo esc_html__( 'JKL Pricing Tables Settings', 'jkl-pricing-tables' );
+    }
+    
+    public function jklpt_recommended_render() {
+        $options = get_option( 'jklpt_options' );
+        ?>
+        <input type='text' name='jkl_options[jkl_recommended_label]' value='<?php echo $options['jkl_recommended_label']; ?>'>
+        <?php
+    }
+    
+    public function jklpt_html_color_render() {
+        $options = get_option( 'jklpt_options' );
+        ?>
+        <input type='text' name='jkl_options[jkl_html_color]' value='<?php echo $options['jkl_html_color']; ?>'>
+        <?php
+    }
+        
+    public function jkl_plugin_settings() {
+        include_once plugin_dir_path( __FILE__ ) . '../views/view-jkl-pricing-table-options.php';
     }
     
 } // END class JKL_Plugins_Admin_Submenu

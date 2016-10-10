@@ -46,7 +46,7 @@ class JKL_Plugins_Admin_Menu {
 
         // Create a top-level menu item
         add_menu_page(
-                __( 'JKL Plugins MAIN', 'jkl-pricing-tables' ), // $page_title
+                __( 'JKL Plugins Admin', 'jkl-pricing-tables' ),// $page_title
                 __( 'JKL Plugins', 'jkl-pricing-tables' ),      // $menu_title
                 'manage_options',                               // $capability
                 'jkl_panel',                                    // $menu_slug

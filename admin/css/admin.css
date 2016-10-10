@@ -69,3 +69,9 @@
 .jkl-content .toggle-on {
     color: #0a0;
 }
+
+#adminmenu #toplevel_page_jkl_panel li.wp-first-item {
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
