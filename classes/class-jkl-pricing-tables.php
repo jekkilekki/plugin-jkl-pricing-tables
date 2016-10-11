@@ -109,15 +109,8 @@ if ( ! class_exists( 'JKL_Pricing_Tables' ) ) {
          * @return  object  $options_page   The WP Options Page
          */
         public function jklpt_admin_menu() {
-            $args = array(
-                'parent_slug'   => 'jkl_panel',
-                'page_title'    => __( 'JKL Pricing Tables', 'jkl-pricing-tables' ),
-                'menu_title'    => __( 'Pricing Tables', 'jkl-pricing-tables' ),
-                'capability'    => 'manage_options',
-                'menu_slug'     => 'jklpt_settings',
-                'callback'      => 'jkl_plugin_settings'
-            );
-            $this->options_page = new JKL_Plugins_Admin_Submenu( $args );
+            
+            $this->options_page = new JKL_Pricing_Tables_Options();
             //return $this->options_page; // A moot point?
         }
         

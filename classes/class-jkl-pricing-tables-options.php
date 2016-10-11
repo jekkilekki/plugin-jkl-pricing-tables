@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
-if ( ! class_exists( 'JKL_Plugins_Admin_Submenu' ) ) {
+if ( ! class_exists( 'JKL_Pricing_Tables_Options' ) ) {
     
 /** 
  * JKL Plugins Admin
@@ -11,7 +11,7 @@ if ( ! class_exists( 'JKL_Plugins_Admin_Submenu' ) ) {
  * @since   1.3.1
  */
     
-class JKL_Plugins_Admin_Submenu {
+class JKL_Pricing_Tables_Options {
 
     /**
      * Submenu Settings
@@ -32,20 +32,20 @@ class JKL_Plugins_Admin_Submenu {
      * @since   1.3.1
      * @var     array   $args       The arguments used to create the submenu page
      */
-    public function __construct( $args ) {
+    public function __construct() {
         
         // Create the MAIN Menu (if it doesn't exist)
         $this->admin_menu = JKL_Plugins_Admin_Menu::get_instance();
 
         // Add a submenu Page to the Main Menu
-        $this->settings = add_submenu_page(
-                $args[ 'parent_slug' ],
-                $args[ 'page_title' ],
-                $args[ 'menu_title' ],
-                $args[ 'capability' ],
-                $args[ 'menu_slug' ],
-                array( $this, $args[ 'callback' ] )
-        );
+        $this->settings = add_submenu_page( 
+                'jkl_panel',
+                __( 'JKL Pricing Tables', 'jkl-pricing-tables' ),
+                __( 'Pricing Tables', 'jkl-pricing-tables' ),
+                'manage_options',
+                'jklpt_settings',
+                array( $this, 'jkl_plugin_settings' )
+            );
         
         add_action( 'admin_init', array( $this, 'jkl_settings_init' ) );
         
@@ -94,14 +94,18 @@ class JKL_Plugins_Admin_Submenu {
     public function jklpt_recommended_render() {
         $options = get_option( 'jklpt_options' );
         ?>
-        <input type='text' name='jkl_options[jkl_recommended_label]' value='<?php echo $options['jkl_recommended_label']; ?>'>
+        <input type='text' name='jkl_options[jkl_recommended_label]' 
+               value='<?php echo $options['jkl_recommended_label']; ?>'
+               placeholder='<?php _e( 'Recommended', 'jkl-pricing-tables' ); ?>'>
         <?php
     }
     
     public function jklpt_html_color_render() {
         $options = get_option( 'jklpt_options' );
         ?>
-        <input type='text' name='jkl_options[jkl_html_color]' value='<?php echo $options['jkl_html_color']; ?>'>
+        <input type='text' name='jkl_options[jkl_html_color]' 
+               value='<?php echo $options['jkl_html_color']; ?>'
+               placeholder='#330099'>
         <?php
     }
         
@@ -109,6 +113,6 @@ class JKL_Plugins_Admin_Submenu {
         include_once plugin_dir_path( __FILE__ ) . '../views/view-jkl-pricing-table-options.php';
     }
     
-} // END class JKL_Plugins_Admin_Submenu
+} // END class JKL_Pricing_Tables_Options
 
 } // END if ( ! class_exists() )
